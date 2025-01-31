@@ -6,8 +6,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ### Writing Lexer and tests
 
-- handling digits
-- p.20
+- passing lexer tests
+- p.21
 
 ```bash
   lexer.go
