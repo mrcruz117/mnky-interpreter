@@ -6,8 +6,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ### Extending Token set and lexer
 
-- Extend Lexer with new operator tokens
-- p.22
+- Extend bool keywords
+- p.23
 
 ```bash
   lexer.go
