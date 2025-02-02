@@ -4,10 +4,10 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ## Current Step
 
-### Making a repl
+### Parser
 
 - init
-- p.26
+- p.28
 
 ```bash
   lexer.go

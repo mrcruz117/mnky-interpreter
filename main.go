@@ -2,8 +2,17 @@ package main
 
 import (
 	"fmt"
+	"os"
+	"os/user"
+
+	"github.com/mrcruz117/mnky-interpreter/repl"
 )
 
 func main() {
-	fmt.Println("Hello, World!")
+	user, err := user.Current()
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("Hello %s! This is the Mnky programming language!\n", user.Username)
+	repl.Start(os.Stdin, os.Stdout)
 }
