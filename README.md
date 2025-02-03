@@ -6,8 +6,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ### Parser
 
-- init
-- p.28
+- parsing statements: let and return
+- p.32
 
 ```bash
   lexer.go
