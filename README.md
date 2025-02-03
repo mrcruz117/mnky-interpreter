@@ -6,9 +6,9 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ### Parser
 
-- parsing statements: return
-- p.43
+- parsing Expressions
+- p.46
 
-```bash
+<!-- ```bash
   lexer.go
-```
+``` -->
