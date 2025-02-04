@@ -67,7 +67,7 @@ func (p *Parser) parseStatement() ast.Statement {
 func (p *Parser) parseLetStatement() *ast.LetStatement {
 	stmt := &ast.LetStatement{Token: p.curToken}
 
-	if !p.expectPeek(token.INDENT) {
+	if !p.expectPeek(token.IDENT) {
 		return nil
 	}
 	stmt.Name = &ast.Identifier{Token: p.curToken, Value: p.curToken.Literal}

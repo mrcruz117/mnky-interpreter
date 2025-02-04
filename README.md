@@ -6,8 +6,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ### Parser
 
-- parsing Expressions
-- p.46
+- Implement Pratt parser
+- p.52
 
 <!-- ```bash
   lexer.go

@@ -12,8 +12,8 @@ const (
 	EOF     = "EOF"
 
 	// Identifiers + literals
-	INDENT = "INDENT" // add, foobar, x, y, ...
-	INT    = "INT"    // 1343456
+	IDENT = "IDENT" // add, foobar, x, y, ...
+	INT   = "INT"   // 1343456
 
 	// Operators
 	ASSIGN   = "="
@@ -61,5 +61,5 @@ func LookupIdent(ident string) TokenType {
 	if tok, ok := keywords[ident]; ok {
 		return tok
 	}
-	return INDENT
+	return IDENT
 }
