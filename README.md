@@ -6,8 +6,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ### Parser
 
-- prefix and infix
-- p.53
+- integer literals
+- p.56
 
 <!-- ```bash
   lexer.go
