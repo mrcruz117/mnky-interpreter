@@ -6,13 +6,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ### Parser
 
-- infix operators
-```bash
-  5 + 5;
-  5 == 5;
-  5 != 5;
-```
-- p.63
+- infix precedences handling
+- p.65
 
 <!-- ```bash
   lexer.go
