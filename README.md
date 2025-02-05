@@ -6,8 +6,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ### Parser
 
-- prefix operators
-- p.59
+- parse prefix operators
+- p.62
 
 <!-- ```bash
   lexer.go
