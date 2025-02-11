@@ -6,8 +6,9 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ### Parser
 
-- more on pratt parsing
-- p.69
+- 2.8 Extending the parser
+- p.77
+- add tracing functions for parser deepdive
 
 <!-- ```bash
   lexer.go
