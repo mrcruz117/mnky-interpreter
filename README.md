@@ -4,10 +4,10 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ## Current Step
 
-### Parser
+### REPL
 
-- 3.5 Evaluation: Evaluating Expressions
-- p.110
+- 3.5 Evaluation: Completing the repl
+- p.112
 
 #### TODO:
 - add tracing functions for parser deepdive
