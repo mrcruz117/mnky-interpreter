@@ -6,8 +6,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ### Parser
 
-- 3.4 Evaluation: representing objects
-- p.106
+- 3.5 Evaluation: Evaluating Expressions
+- p.110
 
 #### TODO:
 - add tracing functions for parser deepdive
