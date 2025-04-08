@@ -6,8 +6,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ### REPL
 
-- 3.6 Conditionals
-- p.124
+- 3.7 Return statements
+- p.127
 
 #### TODO:
 - add tracing functions for parser deepdive
