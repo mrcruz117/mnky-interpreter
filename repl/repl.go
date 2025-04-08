@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/mrcruz117/mnky-interpreter/evaluator"
 	"github.com/mrcruz117/mnky-interpreter/lexer"
 	"github.com/mrcruz117/mnky-interpreter/parser"
 )
@@ -31,9 +32,11 @@ func Start(in io.Reader, out io.Writer) {
 			continue
 		}
 
-		io.WriteString(out, program.String())
-		io.WriteString(out, "\n")
-
+		evaluated := evaluator.Eval(program)
+		if evaluated != nil {
+			io.WriteString(out, program.String())
+			io.WriteString(out, "\n")
+		}
 	}
 }
 
