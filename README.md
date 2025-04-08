@@ -6,8 +6,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ### REPL
 
-- 3.5 Evaluation: infix expressions
-- p.119
+- 3.6 Conditionals
+- p.124
 
 #### TODO:
 - add tracing functions for parser deepdive

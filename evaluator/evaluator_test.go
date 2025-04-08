@@ -67,6 +67,7 @@ func TestEvalBooleanExpression(t *testing.T) {
 		{"true", true},
 		{"false", false},
 		// infix boolean expressions
+		// integers
 		{"1 < 2", true},
 		{"1 > 2", false},
 		{"1 < 1", false},
@@ -75,6 +76,19 @@ func TestEvalBooleanExpression(t *testing.T) {
 		{"1 != 1", false},
 		{"1 == 2", false},
 		{"1 != 2", true},
+
+		// booleans
+		{"true == true", true},
+		{"false == false", true},
+		{"true == false", false},
+		{"false == true", false},
+		{"true != true", false},
+		{"false != true", true},
+		// mixed
+		{"(1 < 2) == true", true},
+		{"(1 < 2) == false", false},
+		{"(1 > 2) == true", false},
+		{"(1 > 2) == false", true},
 	}
 
 	for _, tt := range tests {
