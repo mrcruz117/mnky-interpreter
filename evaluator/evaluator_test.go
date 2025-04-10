@@ -41,8 +41,9 @@ func testEval(input string) object.Object {
 	l := lexer.New(input)
 	p := parser.New(l)
 	program := p.ParseProgram()
+	env := object.NewEnvironment()
 
-	return Eval(program)
+	return Eval(program, env)
 }
 
 func testIntegerObject(t *testing.T, obj object.Object, expected int64) bool {
@@ -90,7 +91,6 @@ func TestEvalBooleanExpression(t *testing.T) {
 		{"(1 > 2) == true", false},
 		{"(1 > 2) == false", true},
 	}
-
 	for _, tt := range tests {
 		evaluated := testEval(tt.input)
 		testBooleanObject(t, evaluated, tt.expected)
@@ -180,7 +180,6 @@ func TestReturnStatements(t *testing.T) {
 		 	}
 		`, 10},
 	}
-
 	for _, tt := range tests {
 		evaluated := testEval(tt.input)
 		testIntegerObject(t, evaluated, tt.expected)
@@ -204,7 +203,6 @@ func TestErrorHandling(t *testing.T) {
 		},
 		{"foobar", "identifier not found: foobar"},
 	}
-
 	for _, tt := range tests {
 		evaluated := testEval(tt.input)
 
@@ -228,7 +226,7 @@ func TestLetStatements(t *testing.T) {
 		{"let a = 5; a;", 5},
 		{"let a = 5 * 5; a;", 25},
 		{"let a = 5; let b = a; b;", 5},
-		{"let a = 5; let b = a; let c = a + b + 5; c;", 5},
+		{"let a = 5; let b = a; let c = a + b + 5; c;", 15},
 	}
 
 	for _, tt := range test {
