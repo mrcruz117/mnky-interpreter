@@ -6,8 +6,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ### REPL
 
-- 3.9 Bindings
-- p.136
+- 3.10 functions and func calls
+- p.140
 
 #### TODO:
 - add tracing functions for parser deepdive
