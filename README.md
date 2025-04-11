@@ -4,8 +4,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ## Current Step
 
-- 3.11 GC
-- p.150
+- 4.1 - Data Types & Functions
+- p.152
 
 ## Features
 
