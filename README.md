@@ -4,8 +4,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ## Current Step
 
-- 4.2 - Parsing Strings
-- p.155
+- 4.2 - String Concatenation
+- p.157
 
 ## Features
 
