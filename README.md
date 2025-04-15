@@ -4,8 +4,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ## Current Step
 
-- 4.1 - Data Types & Functions
-- p.152
+- 4.2 - Parsing Strings
+- p.155
 
 ## Features
 
