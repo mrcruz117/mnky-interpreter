@@ -22,6 +22,7 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 ### Data Types
 
 - **Integers**: Supports 64-bit integer values.
+- **Strings**: Supports good ol strings.
 - **Booleans**: Includes `true` and `false` as boolean values.
 - **Null**: Represents the absence of a value with `null`.
 
@@ -77,6 +78,6 @@ if (result > 10) {
 ## TODO
 
 - Add tracing functions for parser debugging.
-- Extend support for additional data types (e.g., strings, arrays, hash maps).
+- Extend support for additional data types (e.g., arrays, hash maps).
 - Implement built-in functions for common operations.
 - Add support for loops and iteration.
