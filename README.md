@@ -4,8 +4,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ## Current Step
 
-- 4.2 - String Concatenation
-- p.157
+- 4.3 - built-in functions
+- p.159
 
 ## Features
 
@@ -30,6 +30,7 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 - **Prefix Expressions**: Supports prefix operators like `!` (logical NOT) and `-` (negation).
 - **Infix Expressions**: Supports infix operators for arithmetic and comparison (e.g., `5 + 5`, `1 < 2`, `true == false`).
+    - string concatenation as well (e.g., `"Hello," + "world!` = `"Hello, world!"`).
 - **Grouped Expressions**: Allows grouping of expressions using parentheses (e.g., `(1 + 2) * 3`).
 
 ### Statements
