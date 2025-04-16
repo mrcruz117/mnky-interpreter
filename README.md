@@ -4,8 +4,9 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ## Current Step
 
-- 4.3 - built-in functions
-- p.159
+- 4.4 - built-in functions
+  - len arrays
+- p.164
 
 ## Features
 
@@ -30,7 +31,7 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 - **Prefix Expressions**: Supports prefix operators like `!` (logical NOT) and `-` (negation).
 - **Infix Expressions**: Supports infix operators for arithmetic and comparison (e.g., `5 + 5`, `1 < 2`, `true == false`).
-    - string concatenation as well (e.g., `"Hello," + "world!` = `"Hello, world!"`).
+  - string concatenation as well (e.g., `"Hello, " + "world!` = `"Hello, world!"`).
 - **Grouped Expressions**: Allows grouping of expressions using parentheses (e.g., `(1 + 2) * 3`).
 
 ### Statements
@@ -44,6 +45,7 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 - **Function Literals**: Define functions inline using the `fn` keyword (e.g., `fn(x, y) { x + y; }`).
 - **Function Calls**: Call functions with arguments (e.g., `add(1, 2);`).
 - **Closures**: Functions can capture variables from their surrounding scope (e.g., `let adder = fn(x) { fn(y) { x + y; }; };`).
+- **Built-in Functions**: (e.g., `len("sup")` = 3)
 
 ### Scoping
 
@@ -80,5 +82,4 @@ if (result > 10) {
 
 - Add tracing functions for parser debugging.
 - Extend support for additional data types (e.g., arrays, hash maps).
-- Implement built-in functions for common operations.
 - Add support for loops and iteration.
