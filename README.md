@@ -1,6 +1,6 @@
 # mnky-interpreter
 
-An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
+An interpreter written in Go using only the standard library. Thank you Thorsten Ball!
 
 ## Current Step
 
@@ -23,16 +23,17 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 ### Data Types
 
 - **Integers**: Supports 64-bit integer values.
-- **Strings**: Supports good ol strings.
+- **Strings**: Supports string literals and concatenation.
 - **Booleans**: Includes `true` and `false` as boolean values.
 - **Null**: Represents the absence of a value with `null`.
+- **Arrays**: Supports array literals (e.g., `[1, 2, 3]`) and indexing (e.g., `myArray[0]`).
 
 ### Expressions
 
 - **Prefix Expressions**: Supports prefix operators like `!` (logical NOT) and `-` (negation).
-- **Infix Expressions**: Supports infix operators for arithmetic and comparison (e.g., `5 + 5`, `1 < 2`, `true == false`).
-  - string concatenation as well (e.g., `"Hello, " + "world!` = `"Hello, world!"`).
+- **Infix Expressions**: Supports infix operators for arithmetic, comparison, and string concatenation (e.g., `5 + 5`, `1 < 2`, `"Hello" + " World!"`).
 - **Grouped Expressions**: Allows grouping of expressions using parentheses (e.g., `(1 + 2) * 3`).
+- **Index Expressions**: Supports accessing elements in arrays using index expressions (e.g., `myArray[1 + 1]`).
 
 ### Statements
 
@@ -45,7 +46,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 - **Function Literals**: Define functions inline using the `fn` keyword (e.g., `fn(x, y) { x + y; }`).
 - **Function Calls**: Call functions with arguments (e.g., `add(1, 2);`).
 - **Closures**: Functions can capture variables from their surrounding scope (e.g., `let adder = fn(x) { fn(y) { x + y; }; };`).
-- **Built-in Functions**: (e.g., `len("sup")` = 3)
+- **Built-in Functions**: Includes built-in functions like:
+  - `len`: Returns the length of a string or array (e.g., `len("hello")` = `5`).
 
 ### Scoping
 
@@ -54,7 +56,7 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 
 ### Error Handling
 
-- **Runtime Errors**: Provides error messages for invalid operations (e.g., type mismatches, undefined variables).
+- **Runtime Errors**: Provides error messages for invalid operations (e.g., type mismatches, undefined variables, or unsupported operations).
 
 ### REPL (Read-Eval-Print Loop)
 
@@ -76,10 +78,14 @@ if (result > 10) {
 } else {
     return false;
 }
+
+let myArray = [1, 2, 3];
+myArray[0]; // Outputs: 1
 ```
 
 ## TODO
 
 - Add tracing functions for parser debugging.
-- Extend support for additional data types (e.g., arrays, hash maps).
+- Extend support for additional data types (e.g., hash maps).
 - Add support for loops and iteration.
+- Implement more built-in functions.
