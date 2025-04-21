@@ -5,8 +5,8 @@ An interpreter written in Go using only the std lib. Thank you Thorsten Ball!
 ## Current Step
 
 - 4.4 - built-in functions
-  - Parsing index operator expressions
-- p.169
+  - Evaluating array literals
+- p.172
 
 ## Features
 
