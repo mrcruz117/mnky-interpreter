@@ -5,8 +5,8 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 ## Current Step
 
 - 4.4 - built-in functions
-  - Evaluating Index op expressions
-- p.174
+  - built-in array funcs
+- p.177
 
 ## Features
 
