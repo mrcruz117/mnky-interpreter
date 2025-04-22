@@ -4,9 +4,9 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 
 ## Current Step
 
-- 4.4 - built-in functions
-  - built-in array funcs
-- p.177
+- 4.5 - Hashes
+
+- p.181
 
 ## Features
 
