@@ -7,7 +7,7 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 - 4.5 - Hashes
     - parsing hash literals
 
-- p.183
+- p.187
 
 ## Features
 
