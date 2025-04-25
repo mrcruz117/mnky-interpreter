@@ -5,9 +5,9 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 ## Current Step
 
 - 4.5 - Hashes
-    - Hashing Objects
+    - evaluating hash literals
 
-- p.188
+- p.192
 
 ## Features
 
