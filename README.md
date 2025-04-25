@@ -4,9 +4,7 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 
 ## Current Step
 
-- 4.6 - Finale
-
-- p.197
+- 5 - Macro system
 
 ## Features
 
@@ -19,6 +17,13 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 - **Conditionals**: Includes `if` and `if-else` expressions for conditional execution of code.
 - **First-Class Functions**: Functions are first-class citizens, meaning they can be assigned to variables, passed as arguments, and returned from other functions.
 - **Closures**: Functions can capture and use variables from their surrounding environment.
+- **Built-in Functions**: Includes built-in functions like:
+  - `len`: Returns the length of a string or array (e.g., `len("hello")` = `5`).
+  - `first`: Returns the first element of an array (e.g., `first([1, 2, 3])` = `1`).
+  - `last`: Returns the last element of an array (e.g., `last([1, 2, 3])` = `3`).
+  - `rest`: Returns all elements of an array except the first (e.g., `rest([1, 2, 3])` = `[2, 3]`).
+  - `push`: Adds an element to the end of an array (e.g., `push([1, 2], 3)` = `[1, 2, 3]`).
+  - `puts`: Prints arguments to the console.
 
 ### Data Types
 
@@ -27,13 +32,14 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 - **Booleans**: Includes `true` and `false` as boolean values.
 - **Null**: Represents the absence of a value with `null`.
 - **Arrays**: Supports array literals (e.g., `[1, 2, 3]`) and indexing (e.g., `myArray[0]`).
+- **Hashes**: Supports hash literals with string, integer, and boolean keys (e.g., `{"key": "value", 1: true}`).
 
 ### Expressions
 
 - **Prefix Expressions**: Supports prefix operators like `!` (logical NOT) and `-` (negation).
 - **Infix Expressions**: Supports infix operators for arithmetic, comparison, and string concatenation (e.g., `5 + 5`, `1 < 2`, `"Hello" + " World!"`).
 - **Grouped Expressions**: Allows grouping of expressions using parentheses (e.g., `(1 + 2) * 3`).
-- **Index Expressions**: Supports accessing elements in arrays using index expressions (e.g., `myArray[1 + 1]`).
+- **Index Expressions**: Supports accessing elements in arrays or hashes using index expressions (e.g., `myArray[1 + 1]`, `myHash["key"]`).
 
 ### Statements
 
@@ -46,8 +52,6 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 - **Function Literals**: Define functions inline using the `fn` keyword (e.g., `fn(x, y) { x + y; }`).
 - **Function Calls**: Call functions with arguments (e.g., `add(1, 2);`).
 - **Closures**: Functions can capture variables from their surrounding scope (e.g., `let adder = fn(x) { fn(y) { x + y; }; };`).
-- **Built-in Functions**: Includes built-in functions like:
-  - `len`: Returns the length of a string or array (e.g., `len("hello")` = `5`).
 
 ### Scoping
 
@@ -66,26 +70,42 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 ## Example Code
 
 ```mnky
-let add = fn(x, y) {
-    x + y;
-};
+// Variable declarations
+let x = 10;
+let y = 20;
 
-let result = add(5, 10);
-result; // Outputs: 15
+// Arithmetic operations
+let sum = x + y;
 
-if (result > 10) {
+// Conditional statements
+if (sum > 20) {
     return true;
 } else {
     return false;
 }
 
+// Arrays and indexing
 let myArray = [1, 2, 3];
-myArray[0]; // Outputs: 1
+let firstElement = myArray[0];
+
+// Hashes
+let myHash = {"key": "value", 1: true};
+let hashValue = myHash["key"];
+
+// Functions and closures
+let add = fn(a, b) {
+    return a + b;
+};
+let result = add(5, 10);
+
+// Built-in functions
+len(myArray); // Outputs: 3
+first(myArray); // Outputs: 1
+push(myArray, 4); // Outputs: [1, 2, 3, 4]
 ```
 
 ## TODO
 
-- Add tracing functions for parser debugging.
-- Extend support for additional data types (e.g., hash maps).
 - Add support for loops and iteration.
-- Implement more built-in functions.
+- Implement macros for advanced metaprogramming.
+- Add more built-in functions.
