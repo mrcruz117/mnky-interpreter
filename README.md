@@ -4,10 +4,9 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 
 ## Current Step
 
-- 4.5 - Hashes
-    - evaluating hash index expressions
+- 4.6 - Finale
 
-- p.195
+- p.197
 
 ## Features
 
