@@ -4,8 +4,8 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 
 ## Current Step
 
-- 5 - Macro system
-
+- 5.3 - Quote
+- p. 5
 ## Features
 
 ### Core Features
