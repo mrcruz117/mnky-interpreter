@@ -4,8 +4,8 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 
 ## Current Step
 
-- 5.3 - Quote
-- p. 5
+- 5.4 - Unquote
+- p. 9
 ## Features
 
 ### Core Features
