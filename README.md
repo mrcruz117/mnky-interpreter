@@ -5,7 +5,8 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 ## Current Step
 
 - 5.4 - Unquote
-- p. 9
+    - completing the walk
+- p. 13
 ## Features
 
 ### Core Features
