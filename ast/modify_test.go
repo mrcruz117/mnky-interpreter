@@ -14,7 +14,7 @@ func TestModify(t *testing.T) {
 		if !ok {
 			return node
 		}
-		if integer.Value == 1 {
+		if integer.Value != 1 {
 			return node
 		}
 		integer.Value = 2
