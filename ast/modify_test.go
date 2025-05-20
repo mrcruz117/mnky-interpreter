@@ -73,6 +73,10 @@ func TestModify(t *testing.T) {
 				&ExpressionStatement{Expression: two()},
 			}}},
 		},
+		{
+			&ReturnStatement{ReturnValue: one()},
+			&ReturnStatement{ReturnValue: two()},
+		},
 	}
 	for _, tt := range tests {
 		modified := Modify(tt.input, turnOneIntoTwo)

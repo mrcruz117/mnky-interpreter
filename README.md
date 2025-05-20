@@ -5,8 +5,8 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 ## Current Step
 
 - 5.4 - Unquote
-    - If expression
-- p. 16
+    - let statement
+- p. 18
 ## Features
 
 ### Core Features
