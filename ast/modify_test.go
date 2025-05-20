@@ -112,4 +112,23 @@ func TestModify(t *testing.T) {
 			t.Errorf("Modify(%#v) = %#v, expected %#v", tt.input, modified, tt.expected)
 		}
 	}
+	// hash test
+	hashLiteral := &HashLiteral{
+		Pairs: map[Expression]Expression{
+			one(): one(),
+			one(): one(),
+		},
+	}
+
+	Modify(hashLiteral, turnOneIntoTwo)
+	for key, val := range hashLiteral.Pairs {
+		key, _ := key.(*IntegerLiteral)
+		if key.Value != 2 {
+			t.Errorf("key.Value = %d, expected 2", key.Value)
+		}
+		val, _ := val.(*IntegerLiteral)
+		if val.Value != 2 {
+			t.Errorf("val.Value = %d, expected 2", val.Value)
+		}
+	}
 }
