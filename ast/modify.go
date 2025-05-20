@@ -9,7 +9,7 @@ func Modify(node Node, modifier ModifierFunc) Node {
 		for i, statement := range node.Statements {
 			node.Statements[i], _ = Modify(statement, modifier).(Statement)
 		}
-
+	// statements
 	case *ExpressionStatement:
 		node.Expression = Modify(node.Expression, modifier).(Expression)
 	case *InfixExpression:
@@ -32,6 +32,9 @@ func Modify(node Node, modifier ModifierFunc) Node {
 		}
 	case *ReturnStatement:
 		node.ReturnValue, _ = Modify(node.ReturnValue, modifier).(Expression)
+	case *LetStatement:
+		node.Value, _ = Modify(node.Value, modifier).(Expression)
+		// literals
 	}
 
 	return modifier(node)
