@@ -4,9 +4,8 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 
 ## Current Step
 
-- 5.4 - Unquote
-    - converting booleans to ast nodes
-- p. 26
+- 5.5 - Macro Expansion
+- p. 28
 ## Features
 
 ### Core Features
