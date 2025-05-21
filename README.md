@@ -5,8 +5,8 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 ## Current Step
 
 - 5.5 - Macro Expansion
-    - define macros
-- p. 34
+    - expand macros
+- p. 38
 ## Features
 
 ### Core Features
