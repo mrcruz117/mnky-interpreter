@@ -2,11 +2,6 @@
 
 An interpreter written in Go using only the standard library. Thank you Thorsten Ball!
 
-## Current Step
-
-- 5.5 - Macro Expansion
-    - mighty unless
-- p. 41
 ## Features
 
 ### Core Features
@@ -18,13 +13,14 @@ An interpreter written in Go using only the standard library. Thank you Thorsten
 - **Conditionals**: Includes `if` and `if-else` expressions for conditional execution of code.
 - **First-Class Functions**: Functions are first-class citizens, meaning they can be assigned to variables, passed as arguments, and returned from other functions.
 - **Closures**: Functions can capture and use variables from their surrounding environment.
-- **Built-in Functions**: Includes built-in functions like:
-  - `len`: Returns the length of a string or array (e.g., `len("hello")` = `5`).
-  - `first`: Returns the first element of an array (e.g., `first([1, 2, 3])` = `1`).
-  - `last`: Returns the last element of an array (e.g., `last([1, 2, 3])` = `3`).
-  - `rest`: Returns all elements of an array except the first (e.g., `rest([1, 2, 3])` = `[2, 3]`).
-  - `push`: Adds an element to the end of an array (e.g., `push([1, 2], 3)` = `[1, 2, 3]`).
-  - `puts`: Prints arguments to the console.
+- **Macros**: Supports macros for advanced metaprogramming, allowing code to be transformed before evaluation.
+
+### Macros
+
+- **Macro Literals**: Define macros using the `macro` keyword (e.g., `macro(x, y) { x + y; }`).
+- **Quote**: Prevents evaluation of an expression and returns its AST representation (e.g., `quote(1 + 2)`).
+- **Unquote**: Allows evaluation of specific parts of a quoted expression (e.g., `quote(unquote(1 + 2) + 3)` becomes `3 + 3`).
+- **Macro Expansion**: Automatically expands macros during evaluation, enabling powerful code transformations.
 
 ### Data Types
 
@@ -99,6 +95,10 @@ let add = fn(a, b) {
 };
 let result = add(5, 10);
 
+// Macros
+let reverse = macro(a, b) { quote(unquote(b) - unquote(a)); };
+reverse(2 + 2, 10 - 5); // Outputs: (10 - 5) - (2 + 2)
+
 // Built-in functions
 len(myArray); // Outputs: 3
 first(myArray); // Outputs: 1
@@ -108,5 +108,5 @@ push(myArray, 4); // Outputs: [1, 2, 3, 4]
 ## TODO
 
 - Add support for loops and iteration.
-- Implement macros for advanced metaprogramming.
+- Add error handling to macros.
 - Add more built-in functions.
